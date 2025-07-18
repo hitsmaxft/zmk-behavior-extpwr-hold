@@ -1,0 +1,6 @@
+menuconfig ZMK_BEHAVIOR_EXPOWER_HOLD
+    bool "Behavior: EXTPOWER toggle on hold"
+    default y
+
+if ZMK_BEHAVIOR_EXPOWER_HOLD
+endif # ZMK_STATUS_LED

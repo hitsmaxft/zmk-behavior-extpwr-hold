@@ -27,13 +27,14 @@ ZMK External Power Hold module is a Zephyr RTOS module that provides press-to-en
 ### Build Setup
 Initialize west workspace:
 ```bash
-./build.sh
+cd tests && ./build.sh
 ```
 
 ### Build for Testing
 ```bash
+cd tests
 west build -s zmk/app -d $(pwd)/.build/sofle_left -b nice_nano_v2 \
-     -- -DZMK_CONFIG=$(pwd)/config -DZMK_EXTRA_MODULES=$(pwd) -DSHIELD=sofle_left | grep error 
+     -- -DZMK_CONFIG=$(pwd) -DZMK_EXTRA_MODULES=$(pwd)/.. -DSHIELD=sofle_left | grep error 
 ```
 
 ### Nix Environment (Optional)

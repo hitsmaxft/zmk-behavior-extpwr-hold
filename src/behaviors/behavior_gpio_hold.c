@@ -61,7 +61,7 @@ static int on_keymap_binding_pressed(struct zmk_behavior_binding *binding,
         gpio_pin_set_dt(&config->gpios[i], 1);
     }
     
-    LOG_DBG("External power turned ON");
+    LOG_DBG("GPIO turned ON");
     return ZMK_BEHAVIOR_OPAQUE;
 }
 
@@ -74,7 +74,7 @@ static int on_keymap_binding_released(struct zmk_behavior_binding *binding,
         gpio_pin_set_dt(&config->gpios[i], 0);
     }
     
-    LOG_DBG("External power turned OFF");
+    LOG_DBG("GPIO turned OFF");
     return ZMK_BEHAVIOR_OPAQUE;
 }
 

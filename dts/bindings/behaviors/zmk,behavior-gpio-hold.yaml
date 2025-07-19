@@ -1,0 +1,14 @@
+# Copyright (c) 2025, The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: |
+  ZMK external power hold-on/release-off behavior
+
+compatible: "zmk,behavior-GPIO-hold"
+
+include: zero_param.yaml
+
+properties:
+  control-gpios:
+    type: phandle-array
+    description: Optional set of pins that should be set active when pressing.

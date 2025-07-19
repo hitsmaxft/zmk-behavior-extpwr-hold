@@ -1,6 +1,20 @@
-menuconfig ZMK_BEHAVIOR_EXPOWER_HOLD
-    bool "Behavior: EXTPOWER toggle on hold"
-    default y
+# Copyright (c) 2025, The ZMK Contributors
+# SPDX-License-Identifier: MIT
 
-if ZMK_BEHAVIOR_EXPOWER_HOLD
-endif # ZMK_STATUS_LED
+menuconfig ZMK_BEHAVIOR_GPIO_HOLD
+    bool "External Power Hold On/Off Behavior"
+    depends on DT_HAS_ZMK_BEHAVIOR_GPIO_HOLD_ENABLED
+    help
+      Enable support for ZMK external power hold-on/release-off behavior
+      This allows press-on/release-off control of external power switching
+      circuits via dedicated GPIO pins.
+
+if ZMK_BEHAVIOR_GPIO_HOLD
+config ZMK_BEHAVIOR_GPIO_HOLD_LOG_LEVEL
+    int "Log level for external power hold behavior"
+    default 0
+    range 0 4
+    help
+      0: OFF, 1: ERR, 2: WRN, 3: INF, 4: DBG
+
+endif

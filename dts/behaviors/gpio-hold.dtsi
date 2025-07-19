@@ -1,0 +1,10 @@
+#include <dt-bindings/zmk/behaviors.h>
+
+/ {
+    behaviors {
+        ep_hold: behavior_GPIO_hold {
+            compatible = "zmk,behavior-GPIO-hold";
+            #binding-cells = <0>;
+        };
+    };
+};

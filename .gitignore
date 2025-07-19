@@ -1,0 +1,15 @@
+build/
+.west/
+_modules/
+*.swp
+*.swo
+.DS_Store
+.direnv/
+.envrc
+modules
+.west/
+zephyr/
+!zephyr/module.yml
+
+zmk
+.build

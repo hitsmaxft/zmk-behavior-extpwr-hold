@@ -1,4 +1,4 @@
-name: zmk-behavior-extpower-hold
+name: zmk-behavior-gpio-hold
 build:
   cmake: .
   kconfig: Kconfig

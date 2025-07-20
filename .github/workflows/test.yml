@@ -17,15 +17,8 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-    steps:
-    - name: generate var
-      id: generate-secret
-      shell: bash
-      run: |
-        echo "::ZMK_TESTS_VERBOSE::$ZMK_TESTS_VERBOSE"
-        echo "ZMK_TESTS_VERBOSE=$ZMK_TESTS_VERBOSE" >> "$GITHUB_ENV"
-    - uses: urob/zmk-actions/.github/workflows/run-tests.yml@v4
-      with:
-        # Set to 'zephyr' for Zephyr SDK, or 'gnuarmemb' for GNU Arm Embedded.
-        toolchain: gnuarmemb
+    uses: urob/zmk-actions/.github/workflows/run-tests.yml@v4
+    with:
+      # Set to 'zephyr' for Zephyr SDK, or 'gnuarmemb' for GNU Arm Embedded.
+      toolchain: gnuarmemb
+      verbose: true

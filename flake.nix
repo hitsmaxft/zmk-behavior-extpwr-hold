@@ -37,6 +37,7 @@
             packages = with pkgs; [
               gcovr
               gcc-arm-embedded
+              gcc
               zephyrPyEnv
               (zephyr.sdk-0_16.override { targets = [ "arm-zephyr-eabi" ]; })
 
@@ -54,8 +55,6 @@
             ];
 
             shellHook = ''
-              #export ZMK_LIB_PREFIX='zmk_ext'
-              source $PWD/nix/rc.sh
             '';
           };
         });

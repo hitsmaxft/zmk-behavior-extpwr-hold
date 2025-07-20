@@ -41,7 +41,6 @@ echo "Running $testcase:"
 build_cmd="west build ${ZMK_SRC_DIR:+-s $ZMK_SRC_DIR} -d ${ZMK_BUILD_DIR}/tests/$testcase \
     -b native_posix_64 -p -- -DCONFIG_ASSERT=y -DZMK_CONFIG="$(realpath $path)" \
     ${ZMK_EXTRA_MODULES:+-DZMK_EXTRA_MODULES="$(realpath ${ZMK_EXTRA_MODULES})"}"
-
 if [ -z ${ZMK_TESTS_VERBOSE} ]; then
     $build_cmd >/dev/null 2>&1
 else

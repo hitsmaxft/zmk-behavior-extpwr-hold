@@ -18,6 +18,7 @@ on:
 jobs:
   test:
     uses: urob/zmk-actions/.github/workflows/run-tests.yml@v4
+    environment: test  
     with:
       # Set to 'zephyr' for Zephyr SDK, or 'gnuarmemb' for GNU Arm Embedded.
       toolchain: gnuarmemb

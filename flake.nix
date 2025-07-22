@@ -36,7 +36,6 @@
             packages = with pkgs; [
               gcovr
               gcc-arm-embedded
-              gcc
               zephyrPyEnv
               (zephyr.sdk-0_16.override { targets = [ "arm-zephyr-eabi" ]; })
 
@@ -64,10 +63,12 @@ if [[ -n $ZEPHYR_BASE ]] ; then
 
     LIB_BASE_DIR="$(dirname "$ZEPHYR_BASE")"
 
-    ZMK_SRC_DIR={'$'}{LIB_BASE_DIR}/zmk/app
+    ZMK_SRC_DIR=$LIB_BASE_DIR/zmk/app
+    ZMK_BASE=$LIB_BASE_DIR/zmk
 
     export LIB_BASE_DIR
     export ZMK_SRC_DIR
+    export ZMK_BASE
     export Zephyr_DIR
 else
     echo "found ZEPHYR_BASE not found: $ZEPHYR_BASE"

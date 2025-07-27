@@ -468,4 +468,4 @@ Happy building! 🚀
 
 ---
 
-*This guide is based on the ZMK External Power Hold behavior. For questions or contributions, visit the [ZMK community Discord](https://zmk.dev/community) or [GitHub discussions](https://github.com/zmkfirmware/zmk/discussions).*
+*This guide is based on the ZMK External Power Hold behavior [github link](https://github.com/hitsmaxft/zmk-behavior-gpio-hold). 
